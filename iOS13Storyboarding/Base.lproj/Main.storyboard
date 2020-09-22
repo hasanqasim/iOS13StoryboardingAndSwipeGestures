@@ -10,18 +10,89 @@
         <!--Gestures-->
         <scene sceneID="kBh-Ye-b3R">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ebl-DR-8hY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="U1p-nc-teg" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R9i-Kc-xxN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="rQf-pa-egj"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="zUR-ID-keE" appends="YES" id="Iuj-EI-8Fs"/>
+                            <outletCollection property="gestureRecognizers" destination="fOa-0v-X2Z" appends="YES" id="WL5-Fe-wBn"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Gestures" image="Gestures" id="KDl-Vy-9Qm"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ebl-DR-8hY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="zUR-ID-keE" userLabel="Swipe Left Gesture ">
+                    <connections>
+                        <segue destination="SZZ-3v-PHZ" kind="show" id="U2p-ZE-Q5S"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="fOa-0v-X2Z" userLabel="Swipe Right Gesture">
+                    <connections>
+                        <segue destination="bth-Ge-EPc" kind="show" id="kO5-wF-nk1"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-212" y="259"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Jth-wG-xnP">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" id="SZZ-3v-PHZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gBe-mj-1zE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View from Left" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bol-Av-cZz">
+                                <rect key="frame" x="37" y="250" width="246.5" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bol-Av-cZz" firstAttribute="centerX" secondItem="gBe-mj-1zE" secondAttribute="centerX" id="is1-M5-w55"/>
+                            <constraint firstItem="bol-Av-cZz" firstAttribute="centerY" secondItem="gBe-mj-1zE" secondAttribute="centerY" id="lvJ-ge-fic"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="B8D-aH-JVx"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YBo-eG-Sw1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3nh-SA-tbt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1013" y="226"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="q11-ac-r9V">
+            <objects>
+                <viewController id="bth-Ge-EPc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kBS-4V-8y1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View from Right" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqz-Qg-Xsv">
+                                <rect key="frame" x="25.5" y="250" width="269.5" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="fqz-Qg-Xsv" firstAttribute="centerX" secondItem="kBS-4V-8y1" secondAttribute="centerX" id="LQk-CV-EPx"/>
+                            <constraint firstItem="fqz-Qg-Xsv" firstAttribute="centerY" secondItem="kBS-4V-8y1" secondAttribute="centerY" id="TLr-0a-ldE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SSX-eD-6M1"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0Qo-GY-h6f"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Rq-tL-2wf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="857" y="1000"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ppT-91-Bkl">
